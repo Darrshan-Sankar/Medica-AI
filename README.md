@@ -75,7 +75,7 @@ Before setting up Medica, ensure you have completed the following prerequisites:
 Clone this repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/Darrshan-Sankar/Defecto.git
+git clone https://github.com/Darrshan-Sankar/Medica-AI.git
 ```
 
 ### Step 2: Create an .env file with the given template
