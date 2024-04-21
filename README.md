@@ -1,6 +1,6 @@
 # Media AI
 
-Media AI is an innovative application designed to diagnose diseases in brain, eyes, and lungs using machine learning algorithms trained on medical imaging datasets. Additionally, it aims to create an OpenMRS (Open Medical Record System) to track patient diseases and analyze disease trends.
+Media AI is an innovative application designed to diagnose diseases in brain, eyes, and lungs scan inputs using deep learning algorithms trained on medical imaging datasets. Additionally, it aims to create an OpenMRS (Open Medical Record System) to track patient diseases and analyze disease trends.
 
 ## 🌟 General Info
 
