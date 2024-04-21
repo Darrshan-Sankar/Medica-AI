@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='form.css') }}">
+</head>
+
+<script>
+function logout() {
+    fetch('/logout', {
+        method: 'POST',
+    })
+    .then(response => {
+        if (response.ok) {
+            // Redirect to the home page after successful logout
+            window.location.href = '/';
+        } else {
+            console.error('An error occurred during logout');
+        }
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
+
+function printPage() {
+    window.print();
+}
+</script>
+
+<div style="display: flex; align-items: flex-start; justify-content: space-between; padding-left: -100vw;">
+    <button class="formbold-btn logout" onclick="logout()" style="margin: 1rem 2rem;">Logout</button>
+    <button class="formbold-btn print" onclick="printPage()" style="margin: 1rem 2rem; ">Print</button>
+</div>
+
+<div class="formbold-main-wrapper">
+  <div class="formbold-form-wrapper">
+    <h1 style="text-align: center; "><span class="gradient-text" style="font-size: 50px; ">R</span>esults</h1>
+    <p class="formbold-form-label">Name: <span style="color: black;">{{ firstname }} {{ lastname }}</span></p>
+    <p class="formbold-form-label">Age: <span style="color: black;">{{ age }}</span></p>
+    <p class="formbold-form-label">Date of Birth: <span style="color: black;">{{ dob }}</span></p>
+    <p class="formbold-form-label">Gender: <span style="color: black;">{{ gender }}</span></p>
+    <p class="formbold-form-label">Email: <span style="color: black;">{{ email }}</span></p>
+    <p class="formbold-form-label">Address: <span style="color: black;">{{ address }}, {{ address2 }}</span></p>
+    <p class="formbold-form-label">Phone: <span style="color: black;">{{ phone }}</span></p>
+    <p class="formbold-form-label">Post/Zip code: <span style="color: black;">{{ post }}</span></p>
+    <p class="formbold-form-label">City: <span style="color: black;">{{ city }}</span></p>
+    <p class="formbold-form-label" style="display:flex; align-items: center; justify-content: space-between;">Upload:   <span style="color: black;"><img src="{{ upload }}" alt="scan-img" srcset="" width="300px" height="auto"> </span></p>
+    <p class="formbold-form-label">Diagnosis: <span style="color: black;">{{ res }}</span></p>
+  </div>
+</div>
+{% endblock %}
