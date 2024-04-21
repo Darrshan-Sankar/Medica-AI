@@ -49,9 +49,6 @@ Media AI relies on curated medical imaging datasets to train its machine learnin
 #### 🚀 Motivation
 The motivation behind the Media AI project is to leverage machine learning and image processing techniques to enhance medical diagnostics. By automating disease detection processes, Media AI aims to improve the efficiency and accuracy of diagnoses, leading to better patient outcomes.
 
-### 🤖 Disease Diagnosis
-Media AI diagnoses diseases in brain, eyes, and lungs based on medical imaging scans. It utilizes machine learning algorithms trained on datasets containing images of various diseases and normal conditions.
-
 ### 🎯 OpenMRS Implementation
 In addition to disease diagnosis, Media AI implements an OpenMRS system to store patient diseases data. This enables healthcare providers to track patient health records, analyze disease trends, and make informed decisions regarding treatment and resource allocation.
 
@@ -70,16 +67,6 @@ Before setting up Medica, ensure you have completed the following prerequisites:
 1. Create a Firebase project with Authentication, Realtime Database, and Storage Bucket enabled.
 2. Obtain the Firebase API credentials, including the API key, auth domain, database URL, project ID, storage bucket, messaging sender ID, app ID, and measurement ID.
 3. Fill in the `.env` file with the Firebase API credentials.
-
-### Mailgun Setup
-1. Create a Mailgun account.
-2. Obtain the Mailgun API key and domain.
-3. Fill in the `.env` file with the Mailgun API credentials.
-
-### Twilio Setup
-1. Create a Twilio account.
-2. Obtain the Twilio Account SID, Auth Token, from number, and to number.
-3. Fill in the `.env` file with the Twilio API credentials.
 
 ## Native Setup:(On-machine)
 
@@ -117,7 +104,7 @@ Set-up an environment to run the application:
 #### Package Installation
 5. Install required Python packages:
     ```bash
-    pip install flask tensorflow matplotlib opencv-python python-dotenv twilio jsonify
+    pip install flask tensorflow matplotlib opencv-python python-dotenv
     pip install pyrebase
     pip install pycryptodome==3.19.0
 
@@ -150,7 +137,7 @@ Set-up an environment to run the application:
 #### Package Installation
 5. Install required Python packages:
     ```bash
-    pip install flask tensorflow matplotlib opencv-python python-dotenv twilio jsonify
+    pip install flask tensorflow matplotlib opencv-python python-dotenv
     pip install pyrebase
     pip install pycryptodome==3.19.0
 
@@ -182,7 +169,7 @@ Set-up an environment to run the application:
 #### Package Installation
 5. Install required Python packages:
     ```bash
-    pip install flask tensorflow matplotlib opencv-python python-dotenv twilio jsonify
+    pip install flask tensorflow matplotlib opencv-python python-dotenv
     pip install pyrebase
     pip install pycryptodome==3.19.0
     ```
@@ -200,7 +187,7 @@ Set-up an environment to run the application:
 Clone this repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/Darrshan-Sankar/Defecto.git
+git clone https://github.com/Darrshan-Sankar/Medica-AI.git
 ```
 ### Step 2: Create an .env file with the given template
 
@@ -212,7 +199,7 @@ Use the setup made in pre-requisites to fill this file
 Navigate to the project directory and build the Docker image using the provided Dockerfile:
 
 ```bash
-docker build -t defecto .
+docker build -t medica .
 ```
 
 ### Step 4: Run the Docker Container
@@ -220,7 +207,7 @@ docker build -t defecto .
 Once the image is built, you can run the Docker container with the following command:
 
 ```bash
-docker run -p 5000:5000 defecto
+docker run -p 5000:5000 medica
 ```
 
 The application will be accessible at `http://localhost:5000`.
